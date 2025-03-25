@@ -1,0 +1,1307 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+/* Hide the navigation links by default on mobile */
+.nav-links {
+  display: none;
+}
+
+/* Show the navigation links when the menu is active */
+.nav-links.active {
+  display: block;
+}
+
+/* Optional: Style for the mobile toggle button */
+.menu-toggle {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Example media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+  }
+
+  .nav-links.active {
+    display: block; /* Show the links when active */
+  }
+}
+
+
+/* Header Styles */
+header {
+  background-color: #1d3557;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 250px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav .nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: 20px;
+}
+
+header nav .nav-links li {
+  margin-left: 20px;
+}
+
+header nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header nav .social-icons {
+  display: flex;
+  margin-left: 20px;
+}
+
+header nav .social-icons a img {
+  width: 24px;
+  margin-left: 10px;
+}
+
+header nav .hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.cta-button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+/* Hero Section Styles */
+ /* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+}
+
+.hero-slider {
+  display: flex;
+  width: 300%; /* For three images */
+  transition: transform 1s ease-in-out; /* Sliding transition */
+}
+
+.slide {
+  min-width: 100%;  /* Each slide takes full width of the container */
+  height: 100vh;  /* Full height of the viewport */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2; /* Ensure the text is above the images */
+  padding: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* About Us Section Styling */
+#about {
+  background-color: #71bbec97;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 36px;
+  color: #1d3557;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#about p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Add a subtle box shadow and rounded corners */
+#about .container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #about h2 {
+    font-size: 28px;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* Welcome Section Styling */
+#welcome {
+  padding: 50px 0;
+  background-color: #4a8454;
+  animation: fadeInUp 1.5s ease-out; /* Fade in effect */
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease-out; /* Animation for smooth appearance */
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for image */
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Image zoom effect */
+}
+
+/* Hover effect for image */
+.image-section:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(130, 3, 115, 0.2); /* Adding a shadow on hover */
+}
+
+/* Text Section */
+.text-section {
+  flex: 1;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Transition for text section */
+}
+
+/* Text Heading */
+.text-section h2 {
+  font-size: 36px;
+  color: #4a0838;
+  margin-bottom: 15px;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect on title */
+.text-section h2:hover {
+  color: #007BFF; /* Change color to blue on hover */
+  transform: translateX(10px); /* Slight move to the right */
+}
+
+/* Text Paragraph */
+.text-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e3d8d8;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for text color */
+}
+
+.text-section p:first-of-type {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hover effect for paragraphs */
+.text-section p:hover {
+  color: #007BFF; /* Change color on hover */
+  transform: translateY(5px); /* Slight move upward */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-section {
+    margin-bottom: 20px;
+  }
+
+  .text-section h2 {
+    font-size: 28px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+}
+
+/* Keyframes for Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+
+
+
+/* About, Services, Contact Sections */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* General layout for the services section */
+/* General styles for the services section */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slider: Contains all the slides */
+.slider {
+  display: flex;
+  transition: transform 2s ease-in-out; /* Smooth slide transition */
+}
+
+/* Optional: Prevent images from stretching */
+.slider .slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for individual cards */
+.slider-card {
+  background-color: #a00aae;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, margin-top 0.3s ease; /* Smooth transition for hover */
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards; /* Fade in animation */
+}
+
+/* Image inside card */
+.slider-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Title and description */
+.slider-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #e5dddd;
+}
+
+.slider-card p {
+  font-size: 14px;
+  color: #e9e3e3;
+}
+
+/* Hover effect for cards */
+.slider-card:hover {
+  transform: translateY(5px); /* Move card slightly down */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  margin-top: 5px; /* Add slight top margin when hovered */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, margin-top 0.3s ease; /* Smooth hover transition */
+}
+
+/* Navigation buttons */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: 50%; /* Rounded buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Left button */
+button.prev {
+  left: 20px;
+}
+
+/* Right button */
+button.next {
+  right: 20px;
+}
+
+/* Hover effects for navigation buttons */
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .slider-card {
+    width: 90%; /* Use 90% width on smaller screens */
+    height: auto;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+}
+
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+
+
+/* wy us cavebells */
+/* General styling for the section */
+.why-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #0fb42e;
+  gap: 40px; /* Increased gap between image and text */
+  opacity: 0; /* Make section initially invisible */
+  animation: fadeInUp 1s ease-out, spinIn 1s ease-out forwards; /* Apply both fade-in and spin-in animations */
+}
+
+/* Left side: Image */
+.image-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-right: 20px; /* Added margin to the right to separate the image from text */
+}
+
+/* Hover effect for image */
+.image-side img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Right side: Text */
+.text-side {
+  max-width: 50%;
+  padding-left: 20px; /* Added padding to the left for some extra space */
+}
+
+/* Heading style */
+.text-side h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #980b8f;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for heading */
+.text-side h2:hover {
+  color: #a5054a; /* Change color on hover */
+}
+
+/* Paragraph styling */
+.text-side p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #800880;
+  line-height: 1.6;
+}
+
+/* Services list styling */
+.services-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-item {
+  font-size: 18px;
+  color: #b50d88;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add a green check mark before each service item */
+.tick {
+  margin-right: 10px;
+  color: #e2e9e4; /* Green color for check mark */
+  font-size: 20px;
+}
+
+/* Hover effect for service items */
+.service-item:hover {
+  transform: translateX(10px); /* Slide effect */
+  color: #b4077a; /* Change text color */
+}
+
+/* Spin-in animation */
+@keyframes spinIn {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5); /* Start from rotated and smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1); /* End at normal size and no rotation */
+  }
+}
+
+/* Adding animation for smooth transitions */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply fadeInUp animation to the whole section */
+.why-us {
+  animation: fadeInUp 1s ease-out, spinIn 1s ease-out forwards; /* Combine both animations */
+}
+
+@media (max-width: 768px) {
+  .why-us {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Reduce gap in smaller screens */
+  }
+
+  .image-side, .text-side {
+      max-width: 100%;
+  }
+
+  .text-side h2 {
+      text-align: center;
+  }
+
+  /* Optional: If you want to add padding or margin to text and image on smaller screens */
+  .image-side img {
+      margin-bottom: 20px;
+  }
+
+  .text-side {
+      padding-left: 0;
+  }
+}
+
+
+
+/* professional team */
+/* General styles for the section */
+.professional-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  background-color: #05441f;
+  gap: 20px;
+  opacity: 0; /* Initially hidden for fade-in effect */
+  animation: fadeInUp 1s ease-out, fadeIn 1s ease-out forwards; /* Apply both fade-in and slide-up effect */
+}
+
+/* Left side: Text */
+.text-side {
+  max-width: 50%;
+}
+
+/* Heading styling */
+.text-side h2 {
+  font-size: 32px;
+  color: #ebe4e4;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for heading */
+.text-side h2:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+/* Paragraph styling */
+.text-side p {
+  font-size: 18px;
+  color: #f6eeee;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* List styling */
+.text-side ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.text-side ul li {
+  font-size: 18px;
+  color: #eee0e0;
+  margin-bottom: 10px;
+}
+
+/* Right side: Image */
+.image-side {
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.image-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for image */
+.image-side img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Adding fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Adding slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Apply fade-in and slide-up animation to the entire section */
+.professional-team {
+  animation: fadeInUp 1s ease-out, fadeIn 1s ease-out forwards;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .professional-team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-side, .image-side {
+    max-width: 100%;
+  }
+
+  .text-side h2 {
+    text-align: center;
+  }
+
+  .text-side p {
+    text-align: center;
+  }
+}
+
+
+
+/* for enquiry */
+/* General styles for the section */
+/* General styles for the section */
+.enquiries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  background-color: #baa4b6;
+  gap: 30px;
+  overflow: hidden;
+  opacity: 0; /* Start hidden for fade-in animation */
+  animation: fadeInUp 1.5s ease-out forwards; /* Fade-in animation */
+}
+
+/* Left Side: Image */
+.image-side {
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-out forwards; /* Fade-in and slide from left */
+}
+
+.image-side img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for image */
+.image-side img:hover {
+  transform: scale(1.1); /* Zoom effect */
+  opacity: 0.8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Right Side: Form */
+.form-side {
+  flex: 1;
+  max-width: 50%;
+  opacity: 0;
+  animation: fadeInRight 1s ease-out forwards; /* Fade-in and slide from right */
+}
+
+.form-side h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.form-side h2:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-size: 16px;
+  color: #333;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards; /* Fade-in animation for input fields */
+}
+
+form input:focus, form textarea:focus {
+  border-color: #007BFF; /* Change border color on focus */
+  transform: scale(1.02); /* Slight zoom effect when focused */
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards; /* Fade-in button */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-5px); /* Button hover animation */
+}
+
+/* Adding fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Adding fade-in animation for input fields */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); /* Start slightly below */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Animation for sliding image from left */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); /* Start from left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+/* Animation for sliding form from right */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px); /* Start from right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+/* Apply fade-in and slide-up animation to the entire section */
+.enquiries {
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enquiries {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .image-side, .form-side {
+      max-width: 100%;
+  }
+
+  .form-side h2 {
+      text-align: center;
+  }
+}
+
+
+/* testimonials */
+.testimonials {
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Slider Container */
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 30px;
+  flex-wrap: wrap; /* Allow the testimonials to wrap on smaller screens */
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  position: relative;
+  margin-bottom: 20px; /* Add margin at the bottom for space */
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial Image */
+.testimonial-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Testimonial Text */
+.review {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.client-name {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Stars Rating */
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.star {
+  color: orange;
+  font-size: 18px;
+}
+
+.star:not(:last-child) {
+  margin-right: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-slider {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .testimonial {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+  }
+}
+
+
+
+
+/* contact */
+/* Contact Section */
+#contact {
+  background-image: url('assets/ai-generated-8326627_1920.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+  animation: jitteryEffect 0.5s ease-in-out infinite;
+}
+
+@keyframes jitteryEffect {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#contact .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#contact p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input, #contact textarea {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+  background: #fff;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact input:hover, #contact textarea:hover {
+  transform: scale(1.05); /* Slightly enlarge the input/textarea on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background: #f4a261; /* Button color */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#contact button:hover {
+  background: #e76f51; /* Hover color */
+  transform: translateY(-3px); /* Button slightly raises on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  #contact p {
+    font-size: 16px;
+  }
+
+  #contact form {
+    gap: 10px;
+  }
+
+  #contact input, #contact textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  #contact button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+
+
+/* Footer Styles */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left p {
+  margin: 10px 0;
+}
+
+.footer-nav {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin: 10px 0;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-nav ul li a:hover {
+  color: #f4a261;
+}
+
+.social-icons {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-bottom ul li a:hover {
+  color: #f4a261;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left, .footer-nav, .social-icons {
+    flex: 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-left p, .footer-nav ul li a, .footer-bottom ul li a {
+    font-size: 14px;
+  }
+}
